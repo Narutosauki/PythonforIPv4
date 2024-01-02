@@ -21,7 +21,7 @@ def find_non_overlapping_ranges(file_a_ranges, file_b_ranges):
     return non_overlapping_ranges
 
 # 从文件中读取 IP 地址和子网掩码
-file_a_ranges = read_ip_ranges_from_file('foreign.txt')
+file_a_ranges = read_ip_ranges_from_file('ipv4_foreign.txt')
 file_b_ranges = read_ip_ranges_from_file('IPGroup_.txt')
 
 # 找出 A 文件中独有的网段

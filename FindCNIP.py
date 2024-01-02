@@ -1,5 +1,5 @@
 # 读取 ipv4.txt 文件
-with open("ipv4.txt", "r") as ipv4_file:
+with open("ipv4_china.txt", "r") as ipv4_file:
     ipv4_lines = set(ipv4_file.read().splitlines())
 
 # 读取 IPGroup_.txt 文件
