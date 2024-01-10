@@ -43,3 +43,13 @@ with open("ipv4_foreign.txt", "w") as foreign_file:
 
         for ip, prefix_length in foreign_ipv4_info:
             foreign_file.write(f"{ip}/{prefix_length}\n")
+
+with open("ipv4_foreign.txt", "r") as ipv4_foreign_file:
+    ipv4_foreign_lines = ipv4_foreign_file.read().splitlines()
+
+# 过滤掉 */17、*/16、*/18 和 */20 行
+filtered_lines = [line for line in ipv4_foreign_lines if not line.endswith(('*/17', '*/16', '*/18', '*/20'))]
+
+with open("ipv4_foreign.txt", "w") as ipv4_foreign_file:
+    ipv4_foreign_file.write("\n".join(filtered_lines))
+
