@@ -119,7 +119,7 @@ with open('IPGroup_.txt', 'r') as ipgroup_file:
 
 # 将结果附加到 IPGroup_.txt 文件
 with open('IPGroup_.txt', 'a') as ipgroup_file:
-    ipgroup_file.write("\n\n附加的IPv4地址:\n")
+    ipgroup_file.write("\n")
     for ip_range in non_overlapping_ranges:
         ipgroup_file.write(str(ip_range) + '\n')
 
